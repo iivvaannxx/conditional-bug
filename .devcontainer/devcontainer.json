@@ -1,0 +1,34 @@
+{
+	"name": "Quick Link DevContainer",
+	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+
+	"features": {
+
+		"ghcr.io/devcontainers-contrib/features/deno:1": {}
+	},
+
+	"portsAttributes": {
+
+		"8000": {
+			
+			"label": "App",
+			"protocol": "https",
+			"onAutoForward": "notify"
+		}
+	},
+
+	"customizations": {
+
+		"vscode": {
+
+			"extensions": [
+
+				"denoland.vscode-deno",
+				"sastan.twind-intellisense",
+				"github.copilot"
+			]
+		}
+	},
+
+	"forwardPorts": [8000]
+}

@@ -1,0 +1,39 @@
+{
+  "lock": false,
+
+  "tasks": {
+
+    "start": "deno run -A --unstable --watch=source/static/,source/routes/ source/dev.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+
+  "importMap": "import_map.json",
+  "compilerOptions": {
+
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+
+  "fmt": {
+
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+
+    "semiColons": false,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": [ "source/" ]
+  },
+
+  "lint": {
+
+    "include": ["source/"],
+    "exclude": ["source/testdata/", "data/fixtures/**/*.ts"],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  }
+}
